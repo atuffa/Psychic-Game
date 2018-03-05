@@ -1,3 +1,5 @@
+"use strict";
+
 // FUNCTION USED TO RELOAD/RESTART WHEN THE CONDITONS ARE MET
 
 function game(){
@@ -59,6 +61,8 @@ function game(){
             guess = 10;
            document.getElementById("wins").innerHTML = winCount();
            arrayOne = [];
+           message.innerHTML = "";
+           document.getElementById("left").innerHTML = 9;
             
 
       } 
@@ -74,7 +78,7 @@ function game(){
         message.innerHTML = "";
         arrayOne = [];
         guess = 10;  
-        document.getElementById("guessed").innerHTML = 9;
+        document.getElementById("left").innerHTML = 9;
        
    }  
    
