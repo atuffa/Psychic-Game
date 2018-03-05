@@ -14,18 +14,16 @@ function game(){
  // FUNCTION THAT ARE TRIGERED WHEN A KEY IS PRESSED
 
  window.addEventListener("keydown", function(event) {
-     const wordChoice = ["a","b"]
+    const wordChoice = ["a","b","c","d","e","f", "g", "h", "i", "j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     const words = wordChoice.length;
     const randomWordGuessed = wordChoice[Math.floor(Math.random() * words)];
-    console.log(randomWordGuessed);
     let text = " ";
     let guessedWord ;
-     str = event.key; 
+    str = event.key; 
     let winCount = function(){
       
        
         add++;
-        console.log(add);
         return add ;
         
     };
@@ -33,25 +31,22 @@ function game(){
     let lossCount = function(){
         
         loss ++;
-        console.log(loss);
         return loss;
         
     };
 
     let guessesLeft = function(){
         guess --;
-        console.log(left)
         return guess;
         
     };
-    // WORD CONCATENTION FOR THE LETTER GUESSED
+    // WORD CONCATENTION FOR THE WRONG LETTER GUESSED
 
     function insert ( ) {
     arrayOne.push( str );
     //message.innerHTML = ",";
     message = document.getElementById("guessed");
-    message.innerHTML = " "
-    console.log()
+    message.innerHTML = " ";
     message.innerHTML += arrayOne.join(",");
     };
     
@@ -84,12 +79,13 @@ function game(){
    
    
    }, true);
-   //IF CONDITION TO RESTART/RELOAD THE FUNCTION
+
+   //IF CONDITION TO RESTART/RELOAD THE FUNCTION without refreshing the game
 
    if (guess === 0){
     game();
    }
    };
 
-// CALLING THE FUNCTION TO START THE GAME FUNCTION
+// CALLING THE FUNCTION TO START THE GAME 
 game();
